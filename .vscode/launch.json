@@ -7,7 +7,7 @@
     {
       "type": "pwa-chrome",
       "request": "launch",
-      "name": "Launch Chrome against localhost",
+      "name": "Three.js Test",
       "file": "${workspaceFolder}/index.html"
     }
   ]
