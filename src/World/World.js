@@ -1,4 +1,4 @@
-import { MeshToonMaterial } from '../../vendor/three/build/three.module.js';
+import { createBall } from './components/sphere.js';
 import { createCamera } from './components/camera.js';
 import { createCube } from './components/cube.js';
 import { createLights } from './components/lights.js';
@@ -18,12 +18,15 @@ class World {
         renderer = createRenderer();
         container.append(renderer.domElement);
 
-        const cube = createCube();
+        const ball = createBall();
         
         const light = createLights();
-        scene.add(cube, light);
+        scene.add(ball, light);
 
         const resizer = new Resizer(container, camera, renderer);
+        resizer.onResize = () => {
+          this.render();  
+        };
     }
 
     render() {
