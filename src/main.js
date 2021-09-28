@@ -1,13 +1,13 @@
-import { World } from './World/World.js';
+import { SolarSystem } from "./SolarSystem/SolarSystem.js";
 
 function main() {
   const container = document.querySelector('#scene-container');
 
-  // Create instance of our World app
-  const world = new World(container);
+  // Create instance of our SolarSystem app
+  const solarSystem = new SolarSystem(container);
 
   // Start the animation loop
-  world.start();
+  solarSystem.start();
 }
 
 // Call main to start our app
