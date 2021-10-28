@@ -22,7 +22,7 @@ class CelestialObject {
     // the objects mesh. This function
     // is shared across all subclasses
     getMesh() {
-        this.#mesh = createSphere(this.#diameter, this.#textureName, this.#materialType);
+        this.#mesh = createSphere(this.#diameter, this.#textureName);
         return this.#mesh;
     }
 }
