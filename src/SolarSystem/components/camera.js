@@ -5,31 +5,15 @@ function createCamera() {
         35,
         1,
         0.1,
-        100,
+        500,
     );
-    // const movement = 1;
-    // const maxY = 10;
-    // const minY = -10;
-    // let forward = true;
     
     // Set the camera back so we can view the scene
-    camera.position.set(0, 0, 10);
+    camera.position.set(0, 0, 100);
     
-    // camera.tick = (delta) => {
-    //     if (forward) {
-    //         if (camera.position.x < maxY) {
-    //             camera.position.x += movement * delta;
-    //         } else {
-    //             forward = false;
-    //         }
-    //     } else if (!forward) {
-    //         if (camera.position.x > minY) {
-    //             camera.position.x -= movement * delta;
-    //         } else {
-    //             forward = true;
-    //         }
-    //     }
-    // }
+    // Optional tick function so we can move the
+    // camera around.
+    camera.tick = (delta) => { }
     return camera;
 
 }

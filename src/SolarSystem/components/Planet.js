@@ -1,18 +1,13 @@
-import { createBall } from "./sphere.js";
+import { CelestialObject } from "./CelestialObject.js";
 
-class Planet {
-    #texturesPath = "../../../assets/textures/celestialObjects/"
-    #diameter;
-    #textureName;
-    #materialType;
-    constructor(diameter, textureName, materialType) {
-        this.#diameter = diameter;
-        this.#textureName = this.#texturesPath + textureName;
-        this.#materialType = materialType;
-    }
-
-    createPlanet() {
-        return createBall(this.#diameter, this.#textureName, this.#materialType);
+// The Planet class which inherits from the CelestialObject 
+// class. Currently not much has been added to discern it
+// from the other CelestialObjects but might add things
+// that are specific to planets later. Like the type of
+// planet (water, ice, gas etc.)
+class Planet extends CelestialObject {
+    constructor(planetName, diameter, textureName) {
+        super(planetName, diameter, textureName);
     }
 }
 
